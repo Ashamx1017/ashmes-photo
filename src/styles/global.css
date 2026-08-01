@@ -1,0 +1,175 @@
+@import './components.css';
+
+:root {
+  /* ===== Walnut DNA: 纯黑白 + 一抹薄荷绿 ===== */
+  --color-bg: #FFFFFF;
+  --color-bg-soft: #F8F8F6;
+  --color-bg-card: #F4F4F2;
+  --color-text: #000000;
+  --color-text-secondary: #333333;
+  --color-text-muted: #888888;
+  --color-border: #E5E5E5;
+  --color-border-light: #EFEFEF;
+  --color-accent: #8FD0B5;
+  --color-accent-dark: #7AB89E;
+
+  /* Typography */
+  --font-serif: 'Noto Serif SC', 'Cormorant Garamond', serif;
+  --font-sans: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Cormorant Garamond', 'Noto Serif SC', serif;
+
+  /* ===== Walnut DNA: Layout 参数 ===== */
+  --shell-width: 1200px;       /* 外壳 */
+  --content-width: 1000px;     /* 内容栅格 */
+  --col-gap: 35px;             /* 列间距 */
+  --section-gap: 140px;        /* 模块间距 */
+  --nav-height: 80px;
+
+  /* 字体规格: 14px 细体 大行高 (整体比 Walnut DNA 略大，更舒适阅读) */
+  --font-body: 14px;
+  --line-height: 2;
+
+  /* Transitions */
+  --ease: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--font-body);
+  font-weight: 300;
+  line-height: var(--line-height);
+  background: var(--color-bg);
+  color: var(--color-text);
+  overflow-x: hidden;
+  letter-spacing: 0.02em;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-text);
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #d0d0d0;
+  border-radius: 2px;
+}
+
+/* ===== Shell & Content containers ===== */
+.container {
+  max-width: var(--shell-width);
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.container-narrow {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* ===== 12-column Flex grid ===== */
+.grid-12 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--col-gap);
+}
+
+.grid-12 > [class^="col-"] {
+  box-sizing: border-box;
+}
+
+.col-3  { flex: 0 0 calc(3 * ((100% - 11 * var(--col-gap)) / 12) + 2 * var(--col-gap)); }
+.col-4  { flex: 0 0 calc(4 * ((100% - 11 * var(--col-gap)) / 12) + 3 * var(--col-gap)); }
+.col-6  { flex: 0 0 calc(6 * ((100% - 11 * var(--col-gap)) / 12) + 5 * var(--col-gap)); }
+.col-8  { flex: 0 0 calc(8 * ((100% - 11 * var(--col-gap)) / 12) + 7 * var(--col-gap)); }
+.col-9  { flex: 0 0 calc(9 * ((100% - 11 * var(--col-gap)) / 12) + 8 * var(--col-gap)); }
+.col-12 { flex: 0 0 100%; }
+
+/* ===== Section base ===== */
+.section {
+  padding: var(--section-gap) 0;
+}
+
+/* Section label / dash system */
+.section-label {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.section-label::after {
+  content: '—';
+  color: var(--color-text-muted);
+  font-weight: 300;
+}
+
+/* Reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 1s var(--ease-out), transform 1s var(--ease-out);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  :root {
+    --section-gap: 80px;
+    --nav-height: 60px;
+    --col-gap: 20px;
+  }
+
+  .container,
+  .container-narrow {
+    padding: 0 24px;
+  }
+
+  .col-3, .col-4, .col-6, .col-8, .col-9 {
+    flex: 0 0 100%;
+  }
+}
