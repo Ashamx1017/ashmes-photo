@@ -1,5 +1,7 @@
 import { useReveal } from '../hooks/useReveal'
 
+const base = import.meta.env.BASE_URL
+
 export default function About() {
   const ref = useReveal()
 
@@ -25,7 +27,7 @@ export default function About() {
             </a>
             <div className="about-image-square">
               <img
-                src="/about-portrait.jpg"
+                src={`${base}about-portrait.jpg`}
                 alt="Portrait"
                 loading="lazy"
               />

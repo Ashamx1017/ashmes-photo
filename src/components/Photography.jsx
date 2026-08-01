@@ -1,12 +1,14 @@
 import { useReveal } from '../hooks/useReveal'
 
+const base = import.meta.env.BASE_URL
+
 export default function Photography() {
   const ref = useReveal()
 
   const photos = [
-    '/photo-1.jpg',
-    '/photo-2.jpg',
-    '/photo-3.jpg',
+    `${base}photo-1.jpg`,
+    `${base}photo-2.jpg`,
+    `${base}photo-3.jpg`,
   ]
 
   return (

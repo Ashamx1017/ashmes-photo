@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react'
 import { useReveal } from '../hooks/useReveal'
 
+const base = import.meta.env.BASE_URL
 const heroImages = [
-  { src: '/hero-picnic.jpg', alt: '野餐' },
-  { src: '/hero-1.jpg', alt: '逆光人像' },
-  { src: '/hero-portrait.jpg', alt: '人像' },
-  { src: '/hero-2.jpg', alt: '民族风' },
-  { src: '/hero-3.jpg', alt: '夕阳羊群' },
+  { src: `${base}hero-picnic.jpg`, alt: '野餐' },
+  { src: `${base}hero-1.jpg`, alt: '逆光人像' },
+  { src: `${base}hero-portrait.jpg`, alt: '人像' },
+  { src: `${base}hero-2.jpg`, alt: '民族风' },
+  { src: `${base}hero-3.jpg`, alt: '夕阳羊群' },
 ]
 
 export default function Hero() {
