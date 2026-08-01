@@ -22,8 +22,8 @@ export default function Social() {
     <section className="section social" ref={ref}>
       <div className="container">
         <div className="social-header reveal">
-          <h2>douyin</h2>
-          <span className="social-sub">douyin</span>
+          <h2>社交媒体</h2>
+          <span className="social-sub">Social Media</span>
         </div>
         <div className="social-grid reveal">
           {items.map((src, i) => (
@@ -34,7 +34,7 @@ export default function Social() {
               rel="noopener noreferrer"
               className="social-item"
             >
-              <img src={src} alt={`douyin ${i + 1}`} loading="lazy" />
+              <img src={src} alt={`社交媒体 ${i + 1}`} loading="lazy" />
               <div className="social-item-overlay">
                 <span>点击观看</span>
               </div>
