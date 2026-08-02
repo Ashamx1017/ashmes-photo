@@ -6,28 +6,28 @@ export default function Works() {
 
   const works = [
     {
-      img: 'https://images.unsplash.com/photo-1490474822-6464-14ee6934d43a?w=1600&q=85',
-      title: '黄昏的告白',
-      tag: '人像 | 2025',
-      desc: '夕阳将最后的温柔洒向她的侧脸。那一刻风停了，世界安静得只剩快门声。我想记住的不是她的样子，而是她看着远方时眼里那种淡淡的期待。',
-    },
-    {
-      img: 'https://images.unsplash.com/photo-1507563833786-cfcbe99a8d56?w=1600&q=85',
-      title: '海边的人',
+      img: `${import.meta.env.BASE_URL}works/Clipboard_Screenshot.png`,
+      title: '旷野之风',
       tag: '胶片 | 2025',
-      desc: '他说想拍一组有距离感的照片。我们去了海边，风很大，他站在礁石上看着海浪一遍遍涌来。胶片的颗粒感让一切变得像记忆——不那么清晰，却格外真实。',
+      desc: '倾注心意，记录下“稍显特别、总是如此”的瞬间。希望拍摄者和被拍摄者都能够感受到拍摄本身是一个成为美好回忆的瞬间。',
     },
     {
-      img: 'https://images.unsplash.com/photo-1455213901c61a4c83b3a4f7c?w=1600&q=85',
-      title: '老街的光',
-      tag: '街拍 | 2024',
-      desc: '下午四点的老街，光从屋檐的缝隙里漏下来，在地面上画出一条条金线。她走过去的时候，影子被拉得很长。我按下快门的时候想，有些美就是转瞬即逝的。',
+      img: `${import.meta.env.BASE_URL}works/CXR058802.jpg`,
+      title: '自然的生命状态',
+      tag: '人像 | 2025',
+      desc: '她闭着眼，马安静地站在身旁。风吹过发梢的瞬间我按下了快门。人和生灵的相处从来不靠语言，自然本身就是最好的状态。',
     },
     {
-      img: 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=1600&q=85',
-      title: '冬日的窗',
-      tag: '人像 | 2024',
-      desc: '冬天的光是最好的滤镜。她坐在窗边，暖阳透过纱帘打在她身上，整个人像被包裹在一层柔和的琥珀色里。不需要任何修图，那一刻本身就已经是一幅画。',
+      img: `${import.meta.env.BASE_URL}works/Clipboard_Screenshot-2.png`,
+      title: '群山记得',
+      tag: '胶片 | 2025',
+      desc: '牦牛记得草原的每一场风，群山记得她们。阳光把她们镀成金色，像是被时间托举起来的一部分。',
+    },
+    {
+      img: `${import.meta.env.BASE_URL}works/Clipboard_Screenshot-1.png`,
+      title: '夏天',
+      tag: '人像 | 2025',
+      desc: '蓝色和橙色已经把她定格成一段永远年轻的注脚，拍摄本身就是让这一刻活成了值得回忆的事。',
     },
   ]
 
