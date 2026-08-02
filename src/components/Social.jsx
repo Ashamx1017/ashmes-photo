@@ -5,7 +5,7 @@ export default function Social() {
 
   const items = [
     {
-      img: `${import.meta.env.BASE_URL}social/douyin-1.jpg`,
+      img: `${import.meta.env.BASE_URL}social/CXR05880.jpg`,
       link: 'https://v.douyin.com/sfNWJYzfXVI/',
     },
     {
