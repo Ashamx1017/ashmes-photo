@@ -13,11 +13,11 @@ export default function Social() {
       link: 'https://v.douyin.com/Bkz0xkyaJ64/',
     },
     {
-      img: `${import.meta.env.BASE_URL}social/Clipboard_Screenshot.jpg`,
+      img: `${import.meta.env.BASE_URL}social/Clipboard_Screenshot.png`,
       link: 'https://v.douyin.com/mWAclOR5pO8/',
     },
     {
-      img: `${import.meta.env.BASE_URL}social/Clipboard_Screenshot_water.jpg`,
+      img: `${import.meta.env.BASE_URL}social/Clipboard_Screenshot_water.png`,
       link: 'https://v.douyin.com/T1o8iMvJIqI/',
     },
     {
@@ -25,7 +25,7 @@ export default function Social() {
       link: 'https://v.douyin.com/Fd_ab0ImsMs/',
     },
     {
-      img: `${import.meta.env.BASE_URL}social/Clipboard_Screenshot-1.jpg`,
+      img: `${import.meta.env.BASE_URL}social/Clipboard_Screenshot-1.png`,
       link: 'https://v.douyin.com/B0gBKQ8PI2Q/',
     },
   ]
