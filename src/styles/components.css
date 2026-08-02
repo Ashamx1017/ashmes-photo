@@ -1005,6 +1005,7 @@
   color: var(--color-text-secondary);
   line-height: 1.9;
   letter-spacing: 0.02em;
+  white-space: pre-line;
 }
 
 .travel-view-all {
