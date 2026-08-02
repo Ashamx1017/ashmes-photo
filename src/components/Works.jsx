@@ -6,7 +6,7 @@ export default function Works() {
 
   const works = [
     {
-      img: `${import.meta.env.BASE_URL}works/Clipboard_Screenshot.png`,
+      img: `${import.meta.env.BASE_URL}works/CXR07724.jpg`,
       title: '旷野之风',
       tag: '胶片 | 2025',
       desc: '倾注心意，记录下“稍显特别、总是如此”的瞬间。希望拍摄者和被拍摄者都能够感受到拍摄本身是一个成为美好回忆的瞬间。',
@@ -18,13 +18,13 @@ export default function Works() {
       desc: '她闭着眼，马安静地站在身旁。风吹过发梢的瞬间我按下了快门。人和生灵的相处从来不靠语言，自然本身就是最好的状态。',
     },
     {
-      img: `${import.meta.env.BASE_URL}works/Clipboard_Screenshot-2.png`,
+      img: `${import.meta.env.BASE_URL}works/CXR08593_副本.jpg`,
       title: '群山记得',
       tag: '胶片 | 2025',
       desc: '牦牛记得草原的每一场风，群山记得她们。阳光把她们镀成金色，像是被时间托举起来的一部分。',
     },
     {
-      img: `${import.meta.env.BASE_URL}works/Clipboard_Screenshot-1.png`,
+      img: `${import.meta.env.BASE_URL}works/(88)-2.jpg`,
       title: '夏天',
       tag: '人像 | 2025',
       desc: '蓝色和橙色已经把她定格成一段永远年轻的注脚，拍摄本身就是让这一刻活成了值得回忆的事。',
