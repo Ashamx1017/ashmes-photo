@@ -11,7 +11,7 @@ export default function Travel() {
       desc: '第一次去到海边。\n（福建/平潭）',
     },
     {
-      img: `${base}travel/Clipboard_Screenshot.png`,
+      img: `${base}travel/Clipboard_Screenshot.jpg`,
       date: '2024.3',
       desc: '总之，两晚三天远远不够。\n（台北/台湾）',
     },
@@ -21,7 +21,7 @@ export default function Travel() {
       desc: '一次愉快的拍摄，认识了许多新朋友。\n（湖南/长沙）',
     },
     {
-      img: `${base}travel/Clipboard_Screenshot-1.png`,
+      img: `${base}travel/Clipboard_Screenshot-1.jpg`,
       date: '2025.11',
       desc: '那真的是一家阳光明媚的旅馆。它和Cinestill完美搭配。\n（云南/大理）',
     },
