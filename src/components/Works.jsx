@@ -3,37 +3,22 @@ import { useReveal } from '../hooks/useReveal'
 export default function Works() {
   const ref = useReveal()
 
+  // 顺序打乱:横图分散在首尾(位置 1 / 位置 10),8 张竖图穿插中间
+  // 原序:1=1.jpg(竖) / 2=微信图片(竖) / 3=CXR02806(横) / 4=CXR06535(竖) /
+  //      5=CXR07323(竖) / 6=CXR08288(横) / 7=DSC00297(竖) / 8=DSC02982(竖) /
+  //      9=IMG_6907(竖) / 10=R0001718(竖)
+  // 新序:[3, 7, 2, 10, 5, 1, 8, 4, 9, 6] → 横图在 #1 和 #10
   const works = [
-    {
-      img: `${import.meta.env.BASE_URL}works/(52).jpg`,
-      title: '一碗面',
-      tag: '街拍 | 2025',
-      desc: '她靠在门框上吃泡面,门里头亮着灯。风吹过来,带着点味精的香味。她歪头往里看了一眼,我也跟着看了一眼——什么都没有,就亮着。快门按下去的时候,我想,这才是夏天该有的样子。',
-    },
-    {
-      img: `${import.meta.env.BASE_URL}works/DSC04561.jpg`,
-      title: '灯下',
-      tag: '人像 | 2025',
-      desc: '她又坐了那个老位置,趴着,灯把整张脸照亮。墙上那些杯子是她一只只攒回来的,我数过,数到一半就忘了。有回问她最喜欢哪只,她没答,只是笑。大概她也不在意哪一只,在意的是攒的时候去过的地方。',
-    },
-    {
-      img: `${import.meta.env.BASE_URL}works/DSC03037.jpg`,
-      title: '叶隙的光',
-      tag: '人像 | 2025',
-      desc: '太阳从树叶缝里漏下来,落在她脸上。她闭着眼,像在听什么。我举着相机等了一会儿。等什么呢,也说不清。',
-    },
-    {
-      img: `${import.meta.env.BASE_URL}works/CXR08533.jpg`,
-      title: '雪山脚',
-      tag: '旅拍 | 2025',
-      desc: '她在雪山脚下站着,马在旁边低头吃草。风把头发吹乱了,她也不管。我们谁都没说话。照片洗出来,我才看见她眼睛里全是雪的反光。',
-    },
-    {
-      img: `${import.meta.env.BASE_URL}works/CXR09371.jpg`,
-      title: '挑杯子',
-      tag: '街拍 | 2025',
-      desc: '她在巷口蹲了很久,看地上摆的一排杯子。我问挑好了没,她说再看看。摊主都懒得理我们了。最后她拿起一只,不算好看,但握在手里刚好。',
-    },
+    { img: `${import.meta.env.BASE_URL}works/CXR02806.jpg` },
+    { img: `${import.meta.env.BASE_URL}works/DSC00297.jpg` },
+    { img: `${import.meta.env.BASE_URL}works/微信图片_20260618203506_1210_999.jpg` },
+    { img: `${import.meta.env.BASE_URL}works/R0001718.jpg` },
+    { img: `${import.meta.env.BASE_URL}works/CXR07323.jpg` },
+    { img: `${import.meta.env.BASE_URL}works/1.jpg` },
+    { img: `${import.meta.env.BASE_URL}works/DSC02982.jpg` },
+    { img: `${import.meta.env.BASE_URL}works/CXR06535.jpg` },
+    { img: `${import.meta.env.BASE_URL}works/IMG_6907.jpg` },
+    { img: `${import.meta.env.BASE_URL}works/CXR08288.jpg` },
   ]
 
   return (
@@ -46,14 +31,8 @@ export default function Works() {
           {works.map((w, i) => (
             <div className="works-item" key={i}>
               <div className="works-item-img-wrap">
-                <img src={w.img} alt={w.title} loading="lazy" />
+                <img src={w.img} alt="" loading="lazy" />
               </div>
-              <div className="works-item-meta">
-                <span className="works-item-num">0{i + 1}</span>
-                <h3 className="works-item-title">{w.title}</h3>
-                <span className="works-item-tag">{w.tag}</span>
-              </div>
-              <p className="works-item-desc">{w.desc}</p>
             </div>
           ))}
         </div>
