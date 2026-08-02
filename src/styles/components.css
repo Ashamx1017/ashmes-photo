@@ -552,8 +552,8 @@
 /* ===== Pricing ===== */
 .pricing {
   background: var(--color-bg-soft);
-  padding-top: 90px;
-  padding-bottom: 90px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .pricing-header {
@@ -694,8 +694,8 @@
 /* ===== Works (carousel) ===== */
 .works {
   background: var(--color-bg);
-  padding-top: 90px;
-  padding-bottom: 90px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .works-header {
@@ -773,8 +773,8 @@
 /* ===== Social ===== */
 .social {
   background: var(--color-bg);
-  padding-top: 90px;
-  padding-bottom: 90px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .social-header {
@@ -865,8 +865,8 @@
 /* ===== Travel ===== */
 .travel {
   background: var(--color-bg);
-  padding-top: 90px;
-  padding-bottom: 90px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .travel-header {
