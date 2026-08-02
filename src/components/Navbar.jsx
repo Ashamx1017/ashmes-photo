@@ -22,7 +22,7 @@ export default function Navbar() {
       <nav className="nav">
         <div className="nav-inner">
           <h1 className="nav-logo" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-            Ashmes.
+            ashmes<span className="nav-logo-dot"></span>
           </h1>
           <ul className="nav-list">
             {navItems.map((item) => (

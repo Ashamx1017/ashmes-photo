@@ -15,7 +15,6 @@
   background: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--color-border-light);
 }
 
 .nav-inner {
@@ -29,12 +28,26 @@
 }
 
 .nav-logo {
-  font-family: var(--font-sans);
-  font-size: 22px;
-  font-weight: 500;
-  letter-spacing: 0.04em;
+  font-family: 'Kollektif Bold', 'Kollektif', sans-serif;
+  font-size: 44px;
+  font-weight: normal;
+  letter-spacing: -0.02em;
   cursor: pointer;
   color: var(--color-text);
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-logo-dot {
+  display: inline-block;
+  width: 6px;
+  height: 8px;
+  background: var(--color-text);
+  border-radius: 50%;
+  margin-left: 4px;
+  vertical-align: baseline;
+  transform: translateY(-2px) rotate(15deg);
 }
 
 .nav-list {
@@ -560,9 +573,9 @@
 
 .pricing-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--col-gap);
-  max-width: var(--shell-width);
+  max-width: var(--content-width);
   margin: 0 auto;
 }
 
@@ -603,8 +616,16 @@
   font-family: var(--font-serif);
   font-size: 1.1rem;
   font-weight: 400;
-  margin-bottom: 12px;
+  margin-bottom: 4px;
   letter-spacing: 0.05em;
+}
+
+.pricing-subtitle {
+  font-size: 11px;
+  font-weight: 300;
+  color: var(--color-text-secondary);
+  margin-bottom: 12px;
+  letter-spacing: 0.02em;
 }
 
 .pricing-price {
@@ -855,8 +876,8 @@
 
 .social-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--col-gap);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
   margin-bottom: 20px;
 }
 
@@ -1060,6 +1081,14 @@
   letter-spacing: 0.03em;
 }
 
+.contact-business {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--color-accent);
+  margin-top: 16px;
+  letter-spacing: 0.05em;
+}
+
 .contact-bottom {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -1136,6 +1165,84 @@
   display: flex;
   justify-content: space-between;
   font-size: 11px;
+  color: var(--color-text-muted);
+  letter-spacing: 0.05em;
+}
+
+/* ===== QR Modal ===== */
+.qr-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  animation: qrFadeIn 0.25s var(--ease-out);
+}
+
+@keyframes qrFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.qr-modal {
+  position: relative;
+  background: var(--color-bg);
+  padding: 40px 32px 32px;
+  max-width: 360px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid var(--color-border);
+  animation: qrScaleIn 0.3s var(--ease-out);
+}
+
+@keyframes qrScaleIn {
+  from { transform: scale(0.92); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.qr-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  line-height: 1;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  padding: 4px 8px;
+  transition: color 0.2s;
+}
+
+.qr-modal-close:hover {
+  color: var(--color-text);
+}
+
+.qr-modal-img {
+  width: 240px;
+  height: 240px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+.qr-modal-tip {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-text);
+  margin-bottom: 6px;
+  letter-spacing: 0.05em;
+}
+
+.qr-modal-note {
+  font-size: 12px;
+  font-weight: 300;
   color: var(--color-text-muted);
   letter-spacing: 0.05em;
 }

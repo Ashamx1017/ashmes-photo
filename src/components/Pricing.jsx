@@ -5,29 +5,26 @@ export default function Pricing() {
 
   const plans = [
     {
-      name: '基础版',
+      name: '轻写真',
+      subtitle: '日常记录 / 形象照',
       price: '¥599',
       duration: '约 1.5 小时',
-      features: ['精修 9 张', '原片全送', '1 个拍摄场景', '线上选片', '交付周期 7 天'],
+      features: ['精修 9 张', '含前期策划沟通', '送有效原片', '1 个拍摄场景', '线上选片', '交付周期 7 天'],
     },
     {
-      name: '高级版',
+      name: '故事集',
+      subtitle: '个人写真 / 情侣纪念 / 闺蜜合拍',
       price: '¥999',
       duration: '约 3 小时',
-      features: ['精修 25 张', '原片全送', '2 个拍摄场景', '线上选片', '交付周期 10 天', '可加印相册'],
+      features: ['精修 25 张', '含前期策划沟通', '送有效原片', '2 个拍摄场景', '交付周期 10 天', '花絮赠送', '可加印相册'],
       featured: true,
     },
     {
-      name: '写真集',
+      name: '全记录',
+      subtitle: '个人纪实 / 旅拍 / 家庭',
       price: '¥1,680',
       duration: '全天 / 或分两次拍摄',
-      features: ['精修 36 张', '原片全送', '拍摄场景不限', '线上选片', '交付周期 20 天', '赠送精美排版相册'],
-    },
-    {
-      name: '商业 / 活动',
-      price: '面议',
-      duration: '按项目定制',
-      features: ['精修数量面议', '交付周期面议', '原片全送', '团队协作', '商业授权', '线上选片'],
+      features: ['精修 40 张', '含前期策划沟通', '送有效原片', '拍摄场景不限', '交付周期 20 天', '花絮赠送', '赠送精美排版相册'],
     },
   ]
 
@@ -41,8 +38,9 @@ export default function Pricing() {
         <div className="pricing-grid">
           {plans.map((plan, i) => (
             <div className={`pricing-card reveal ${plan.featured ? 'pricing-card-featured' : ''}`} key={i}>
-              {plan.featured && <span className="pricing-badge">推荐</span>}
+              {plan.featured && <span className="pricing-badge">最受欢迎</span>}
               <h3 className="pricing-name">{plan.name}</h3>
+              {plan.subtitle && <p className="pricing-subtitle">{plan.subtitle}</p>}
               <p className="pricing-price">{plan.price}</p>
               <p className="pricing-duration">{plan.duration}</p>
               <ul className="pricing-features">
