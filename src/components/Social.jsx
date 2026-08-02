@@ -13,11 +13,11 @@ export default function Social() {
       link: 'https://v.douyin.com/Bkz0xkyaJ64/',
     },
     {
-      img: `${import.meta.env.BASE_URL}social/CXR07160.jpg`,
+      img: `${import.meta.env.BASE_URL}social/Clipboard_Screenshot.png`,
       link: 'https://v.douyin.com/mWAclOR5pO8/',
     },
     {
-      img: `${import.meta.env.BASE_URL}social/Clipboard_Screenshot.png`,
+      img: `${import.meta.env.BASE_URL}social/Clipboard_Screenshot_water.png`,
       link: 'https://v.douyin.com/T1o8iMvJIqI/',
     },
     {
